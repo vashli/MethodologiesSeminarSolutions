@@ -57,7 +57,6 @@ public class Problem7 extends SuperKarel {
 		if(noBeepersPresent()){
 			putBeeper();
 		}
-		
 	}
 
 	/*
