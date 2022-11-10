@@ -1,11 +1,13 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
-
 import acm.graphics.*;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
-//43. წრეწირის drag ით გადაადგილება
+//43B. გრაფიკულ პროგრამაში დახატეთ 2 ფიგურა: მართკუთხედი და ოვალი, ორივე იყოს შევსებული.
+//თუ მაუსს დავაჭერთ რომელიმე ფიგურას და გავაკეთებთ დრაგს, ფიგურაც უნდა მოძრაობდეს 
+//მანამ სანამ მაუსს ხელს არ ავუშვებთ. თუ ხელს დავაჭერთ კლავიატურის რომელიმე ღილაკს, 
+//ბოლოს გამოძრავებული ფიგურა უნდა გაფერადდეს რანდომ ფერით.
 
 public class Problem43B extends GraphicsProgram{
 	private static final int RADIUS = 50;

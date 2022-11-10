@@ -1,15 +1,9 @@
 import java.awt.event.MouseEvent;
-
-import acm.graphics.GLine;
-import acm.graphics.GObject;
-import acm.graphics.GOval;
-import acm.graphics.GPoint;
-import acm.graphics.GPolygon;
+import acm.graphics.*;
 import acm.program.GraphicsProgram;
 
-//42. Paint-ის მონაკვეთის ხატვის გაკეთება, ჯერ აჭერ მაუსს, ფიქსირდება ერთი წვერო, მერე
-//მაუსის მოძრაობისას მონაკვეთიც მოძრაობს რადგან მეორე წვერო არაა დაფიქსირებული და
-//კლიკით ფიქსირდება მეორე წვეროც
+//43. წრეწირის drag ით გადაადგილება
+
 public class Problem43 extends GraphicsProgram{
 	private static int RADIUS = 100;
 	private GOval circle;

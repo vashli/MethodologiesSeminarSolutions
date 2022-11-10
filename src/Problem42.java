@@ -5,19 +5,23 @@ import acm.graphics.GOval;
 import acm.graphics.GPolygon;
 import acm.program.GraphicsProgram;
 
-//43. წრეწირის drag ით გადაადგილება
+//42. Paint-ის მონაკვეთის ხატვის გაკეთება, ჯერ აჭერ მაუსს, ფიქსირდება ერთი წვერო, მერე
+//მაუსის მოძრაობისას მონაკვეთიც მოძრაობს რადგან მეორე წვერო არაა დაფიქსირებული და
+//კლიკით ფიქსირდება მეორე წვეროც
 public class Problem42 extends GraphicsProgram{
-	private static int RADIUS = 100;
-	private GOval circle;
+	private GLine line;
 	
 	public void init(){
 		addMouseListeners(); 
 	}
-	
-	public void run(){
-		circle = new GOval(2 * RADIUS, 2 * RADIUS);
-		circle.setFilled(true);
-		add(circle, getWidth()/ 2 - RADIUS , getHeight()/ 2 - RADIUS );
-	}
 
+	public void mouseDragged(MouseEvent e){
+		line.setEndPoint(e.getX(), e.getY());
+	}
+	
+	public void mousePressed(MouseEvent e){
+		line = new GLine(e.getX(), e.getY(), e.getX(), e.getY());
+		add(line);
+	}
+	
 }
