@@ -8,7 +8,7 @@ public class Problem46 extends ConsoleProgram {
 		while(true){
 			String str = readLine("Enter String: ");
 			println("Most frequent char: " + frequentChar(str));
-			println("Most frequent English letter: " +frequentLetter(str));
+			println("Most frequent letter: " +frequentLetter(str));
 		}
 	}
 
