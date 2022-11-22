@@ -31,8 +31,38 @@ public class Midterm1 extends ConsoleProgram {
 	}
 
 	private int log(int n, int m) {
-		// TODO
-		return 0;
+		if (n == 1) return -1;
+
+		for (int i = 0; i <= m; i++) {
+			if (pow(n, i) == m) {
+				return i;
+			} else if (pow(n, i) > m) {
+				return i - 1;
+			}
+		}
+		
+		return -1;
 	}
+
+	private int pow(int n, int i) {
+		int res = 1;
+		for (int j = 0; j < i; j++) {
+			res *= n; // res = res * n;
+		}
+		return res;
+	}
+
+	// version 2
+//	private int log(int n, int m) {
+//		if (n == 1)return -1;
+//		
+//		int number = n;
+//		int power = 0;
+//		while (number <= m) {
+//			number *= n;
+//			power++;
+//		}
+//		return power;
+//	}
 
 }

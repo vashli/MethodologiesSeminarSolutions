@@ -1,3 +1,7 @@
+import java.awt.event.MouseEvent;
+
+import acm.graphics.GLine;
+import acm.graphics.GPoint;
 import acm.program.GraphicsProgram;
 //ამოცანა 3. ტეხილი (25 ქულა)
 //დაწერეთ პროგრამა რაომელიც მომხმარებელს მისცემს საშუალებას მაუსის დახმარებით დახატოს ტეხილი.
@@ -14,7 +18,30 @@ import acm.program.GraphicsProgram;
 //ისარს. ისევე როგორც ეს ხდება პროგრამაში Paint.
 
 public class Midterm3 extends GraphicsProgram{
+	private GPoint prevPoint;
+	private GLine line;
 	public void run(){
-		// TODO
+		addMouseListeners();
+		prevPoint = new GPoint(0, 0);
 	}
+	
+	public void mousePressed(MouseEvent e){
+		line = new GLine(prevPoint.getX(), prevPoint.getY(),
+				e.getX(), e.getY());
+		add(line);
+		prevPoint = new GPoint(e.getX(), e.getY());
+	}
+	
+	public void mouseDragged(MouseEvent e){
+		line.setEndPoint(e.getX(), e.getY());
+		prevPoint = new GPoint(e.getX(), e.getY());
+	}
+	
+	// we don't need mouseClicked anymore, same happens in mousePressed
+//	public void mouseClicked(MouseEvent e){
+//		line = new GLine(prevPoint.getX(), prevPoint.getY(),
+//				e.getX(), e.getY());
+//		add(line);
+//		prevPoint = new GPoint(e.getX(), e.getY());
+//	}
 }
