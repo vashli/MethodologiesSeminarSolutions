@@ -104,4 +104,11 @@ public class School {
 		teacherSubjects.remove(teacher);
 	}
 	
+	// for debug
+	public void showAll(){
+		System.out.println("teachers and subjects:");
+		System.out.println(teacherSubjects);
+		System.out.println("subjects and pupils:");
+		System.out.println(subjectPupils);	
+	}
 }
