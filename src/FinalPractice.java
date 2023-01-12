@@ -16,6 +16,11 @@ import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
 
+//ვიდეოს ლინკი:
+//https://www.youtube.com/watch?v=zjpmqXXrq-Y&list=PL6qg6DlVkjd5qcN9fP6DbzqmIugbiepWY&index=2
+
+
+
 //Array
 //ArrayList
 //-create, initial values, get, set, add, remove, size, sort, random sort
