@@ -1,5 +1,9 @@
 # MethodologiesSeminarSolutions
 
+google.classroom-ის ფაილები(წიგნები/სლაიდები/ჰენდაუთები/დავალებები):
+https://drive.google.com/drive/folders/1kpd-AYiA0G1v2BbQDWeih1eLYM4CFFd3?usp=sharing
+
+
 სემინარების ამოცანების პირობები:
 problem set.pdf
 
@@ -12,3 +16,5 @@ https://docs.google.com/document/d/1AVkTzyPBdkFZYUKBjRnxR0tspiycwlnID53uKB-6XKE/
 
 ფინალურისთვის სავარჯიშო ამოცანები:
 https://docs.google.com/document/d/1YiDOPJwCGBPvfUa0YCT2LylNN3fCRPfp7EbRi5xsa-0/edit?usp=sharing
+
+
