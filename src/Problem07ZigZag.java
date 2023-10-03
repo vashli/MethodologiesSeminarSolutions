@@ -45,9 +45,9 @@ public class Problem07ZigZag extends Karel{
 	private void moveToNextLineIfPossible() {
 		// && is logical and operator
 		if (facingEast() && leftIsClear()) { // at the end of the row, next row exists   
-				turnLeft();
-				move();
-				turnLeft();
+			turnLeft();
+			move();
+			turnLeft();
 		} else if(facingWest() && rightIsClear()) { // at the beginning of the row, next row exists
 			turnRight();
 			move();
