@@ -2,8 +2,8 @@ import java.awt.Color;
 import acm.graphics.*;
 import acm.program.*;
 
-//12. გრაფიკული პროგრამის გამოყენებით დახატეთ სახლი.
-public class Problem12 extends GraphicsProgram {
+//12. გრაფიკული პროგრამის გამოყენებით დახატეთ სახლი. (ფერადი, სახურავიც)
+public class Problem12Painted extends GraphicsProgram {
 
 	public void run() {
 		drawWall();
