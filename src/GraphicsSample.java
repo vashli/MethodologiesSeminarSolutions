@@ -11,22 +11,22 @@ public class GraphicsSample extends GraphicsProgram {
 		GRect myRect = new GRect(100, 200);
 		myRect.setFilled(true);
 		add(myRect, 100, 150);
-		
+
 		myRect.setColor(Color.RED);
-		pause(PAUSE_MS); //pause works in ConsoleProgram too
+		pause(PAUSE_MS); // pause works in ConsoleProgram too
 		myRect.setColor(Color.BLUE);
-		
+
 //		myRect.setLocation(10, 10);
 //		myRect.move(10, 10);
-		
+
 		int finalX = 200;
 		int vx = VEL_X;
 		int vy = 0;
-		
-		// != won't work sometimes 
-		while(myRect.getX() <= finalX - vx) {
+
+		// != won't work sometimes
+		while (myRect.getX() <= finalX - vx) {
 			myRect.move(vx, vy);
-			pause(PAUSE_MS); 
+			pause(PAUSE_MS);
 		}
 
 	}
