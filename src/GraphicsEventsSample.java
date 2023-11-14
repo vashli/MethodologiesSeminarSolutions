@@ -77,5 +77,13 @@ public class GraphicsEventsSample extends GraphicsProgram {
 	public void keyTyped(KeyEvent e) {
 		System.out.println("typed: " + e.getKeyChar()); // prints in console
 		label.setLabel("key typed: " + e.getKeyChar());
+		
+//		if (e.getKeyChar() == 'h') {
+//			
+//		}
+		
+//		if(e.getKeyCode() == KeyEvent.VK_SPACE) {
+//			
+//		}
 	}
 }
