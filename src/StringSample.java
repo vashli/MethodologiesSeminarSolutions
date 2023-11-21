@@ -1,7 +1,48 @@
+import java.util.StringTokenizer;
+
 import acm.program.ConsoleProgram;
 
 public class StringSample extends ConsoleProgram{
 	public void run() {
+		
+//		char <-> int manipulations 
+		println((int)'7');
+		println((int)'7' - (int) '0');
+		println('7' - '0');
+		
+		println((char)('7' - '0'));
+		
+		
+		for(int i = 0; i < 26; i ++) {
+			println((char)('a' + i));
+		}
+		  
+		
+		// String Tokenizer sample
+		
+		// \n -character for new line
+		// \t -character for tab
+		String text = "mari. 2, \n .  \t\t 3 4";
+		
+		StringTokenizer tokenizer = new StringTokenizer(text);
+		
+//		StringTokenizer tokenizer = new StringTokenizer(text,
+//				" ,.");
+
+//		StringTokenizer tokenizer = new StringTokenizer(text,
+//				" ,.", true);
+		
+//		StringTokenizer tokenizer = new StringTokenizer(text,
+//				" ,.", false);
+		
+		while(tokenizer.hasMoreTokens()) {
+			String currToken = tokenizer.nextToken();
+			println(currToken);
+		}
+		
+	}
+	
+	private void basicStringSample() {
 		String str1 = "mari";
 		String str2 = "mari";
 		String str3 = new String("mari");
