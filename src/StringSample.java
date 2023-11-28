@@ -4,7 +4,16 @@ import acm.program.ConsoleProgram;
 
 public class StringSample extends ConsoleProgram{
 	public void run() {
+		String initial = "mariamii";
+		println(initial.replace("ari", "T"));
 		
+		
+		characterClassSample();
+		substringSample();
+		
+	}
+	private void charManipulationSample() {
+
 //		char <-> int manipulations 
 		println((int)'7');
 		println((int)'7' - (int) '0');
@@ -16,8 +25,21 @@ public class StringSample extends ConsoleProgram{
 		for(int i = 0; i < 26; i ++) {
 			println((char)('a' + i));
 		}
-		  
+//		char <-> int manipulations 
+		println((int)'7');
+		println((int)'7' - (int) '0');
+		println('7' - '0');
 		
+		println((char)('7' - '0'));
+		
+		
+		for(int i = 0; i < 26; i ++) {
+			println((char)('a' + i));
+		}
+	}
+	
+	private void tokenizerSample() {
+
 		// String Tokenizer sample
 		
 		// \n -character for new line
@@ -39,9 +61,44 @@ public class StringSample extends ConsoleProgram{
 			String currToken = tokenizer.nextToken();
 			println(currToken);
 		}
+
+	}
+	private void characterClassSample() {
+//		wrapper classes for primitive types
+//		int - > Integer
+//		double -> Double
+//		char -> Character
+		
+//		static  vs non static method
+		
+//		obj.nonStaticMethod();
+//		ClassName.staticMethod(obj);
+		
+		
+		char ch = 'a';
+		println(Character.isDigit(ch));
+		println(Character.isDigit('9'));
+		
+//		ch.isDigit()
+	}
+	private void substringSample() {
+		
+		String text = "mari";
+		String substr = text.substring(2); //ri
+		String halfDelI = text.substring(0, 2) + 
+				delIsInStr(text.substring(2));
+		
+		text = "mari";
+		int index = text.indexOf("ari");
+		String mariWithoutAri  = "mari".substring(0, index);
 		
 	}
 	
+	private String delIsInStr(String text) {
+		text = text.replace("i", "");
+		return text;
+	}
+
 	private void basicStringSample() {
 		String str1 = "mari";
 		String str2 = "mari";
