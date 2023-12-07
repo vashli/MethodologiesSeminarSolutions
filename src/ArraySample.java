@@ -15,18 +15,28 @@ public class ArraySample extends ConsoleProgram{
 		myArr2[2] = 100;
 		println(myArr2[2]);
 		
+		println("print with for loop: i, arr[i]");
 		for(int i = 0; i < myArr2.length; i++) {
-			println(myArr2[i]);
+			println("index: " + i + ",value: " + myArr2[i]);
 		}
 		
+		println("print with foreach loop: each element, no index)");
+		for(int value: myArr2) {
+			println("value: " + value);
+		}
 		
 //		array -> wrapper class Arrays
+		println("println(myArr2); // does not work");
 		println(myArr2); // does not work
+		println("println(Arrays.toString(myArr2)); // works");
 		println(Arrays.toString(myArr2)); // works
 		
+		
+		println("== does not work for arrays Arrays.equal does");
 		if(myArr2 == myArr3) {
 			println("==");
 		}
+		
 		if(Arrays.equals(myArr2, myArr3)) {
 			println("Equals");
 		}
@@ -39,5 +49,7 @@ public class ArraySample extends ConsoleProgram{
 		
 		Arrays.sort(toSort);
 		println(Arrays.toString(toSort));
+		
+		
 	}
 }
