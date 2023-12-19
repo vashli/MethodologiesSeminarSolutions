@@ -5,32 +5,26 @@ import acm.program.ConsoleProgram;
 
 public class MapSample extends ConsoleProgram {
 	public void run() {
-		Map<String, Double> midtermScores = new HashMap<String, Double>(); 
+		// array []  // Arrays
+		// ArrayList
+		// key -> value
+		// map, dictionary 
+	
+		Map<String, Integer> strudentScores = new HashMap<String, Integer>();
 		
-//		Map - interfase
-//		Hashmap class, implements Map
-		midtermScores.put("mberi15", 10.7);
-		midtermScores.put("mberi20", 10.8);
+		strudentScores.put("mberi15", 7);
+		println(strudentScores.get("mberi15"));
 		
-		midtermScores.put("mberi21", 10.9);
+		strudentScores.put("mberi21", 10);
 		
-		double score = midtermScores.get("mberi15");
-		println(midtermScores.get("mberi15"));
-		
-
-		for(String key: midtermScores.keySet()) {
-			println(key + ": " + midtermScores.get(key));
+		for(String key: strudentScores.keySet()) {
+			println(key + ": " + strudentScores.get(key));
 		}
 		
+//		Map - interface
+//		HashMap - class (implements Map)
+//		strudentScores - object , instance of HashMap
+			
 	}
+
 }
-
-
-
-
-
-
-
-
-
-
