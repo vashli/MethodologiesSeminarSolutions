@@ -14,7 +14,6 @@ public class FriendGroupConsole extends ConsoleProgram{
 	private static final String SENTINEL = "";
 	public void run() {
 		FriendGroup myFriendGroup = new FriendGroup();
-		
 		while(true) {
 			String friend = readLine("Enter friend: ");
 			if(friend.equals(SENTINEL)) {
@@ -24,17 +23,18 @@ public class FriendGroupConsole extends ConsoleProgram{
 			myFriendGroup.addFriendship(person, friend);
 		}
 		
-		String popular = myFriendGroup.getPopularPerson();
-		println("Person with most friends: " + popular);
-	
-//		println("Friends: " + myFriendGroup.getFriendsAsString("lali"));
-		
+//		63
+		println("Person with most friends: " + myFriendGroup.getPopularPerson());
+//		64
+		println("Everyone with their friends: ");
 		ArrayList<String> names = myFriendGroup.getAllNames();
-		
 		for(String name: names) {
 			println(name + "'s friends: " + myFriendGroup.getFriendsAsString(name));
 		}
-		
+//		65
+		println("Friends of most people: " + myFriendGroup.getPopularFriend());
+//		66
+		ArrayList<String> twoPeople = myFriendGroup.getTwoPeopleWithoutCommonFriends();
+		println("People with no common friends: " + twoPeople);
 	}
-
 }

@@ -1,13 +1,22 @@
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
 
 public class MarisMap implements Map{
-
+	
+	private ArrayList<Object> keys;
+	private ArrayList<Object> values;
+	
+	public MarisMap() {
+		keys = new ArrayList<Object>();
+		values = new ArrayList<Object>();
+	}
+	
+	
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return keys.size();
 	}
 
 	@Override
@@ -36,7 +45,15 @@ public class MarisMap implements Map{
 
 	@Override
 	public Object put(Object key, Object value) {
-		// TODO Auto-generated method stub
+		for(int i = 0; i < keys.size(); i++) {
+			if(keys.get(i).equals(key)) {
+				Object prevValue = values.get(i);
+				values.set(i, value);
+				return prevValue;
+			}
+		}
+		keys.add(key);
+		values.add(value);
 		return null;
 	}
 
@@ -75,11 +92,4 @@ public class MarisMap implements Map{
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	@Override
-	public String toString() {
-		return null;
-		
-	}
-
 }
