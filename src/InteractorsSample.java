@@ -45,22 +45,18 @@ public class InteractorsSample extends GraphicsProgram implements ComponentListe
 		add(sizeSlider, SOUTH);
 		add(new JLabel("Large"), SOUTH);
 		
-		
-		
-		
 		textField = new JTextField(20);
 		add(textField, SOUTH);
 		
 		
 		textField.addActionListener(this);
 		
-		
 		addActionListeners();
 		addComponentListener(this);
 		
 	}
 
-	GOval oval = new GOval(5, 5);
+	private GOval oval = new GOval(5, 5);
 	public void run() {
 		
 		add(oval);
@@ -110,4 +106,6 @@ public class InteractorsSample extends GraphicsProgram implements ComponentListe
 		
 	}
 	
+
+
 }
