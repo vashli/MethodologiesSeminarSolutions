@@ -5,12 +5,14 @@ import acm.program.ConsoleProgram;
 public class SchoolTst extends ConsoleProgram {
 	public void run() {
 		School school = new School();
+		
 		school.addTeacher("mari");
 		school.addTeacher("nino");
 
 		school.addSubject("mari", "cs");
 		school.addSubject("mari", "math");
 		school.addSubject("nino", "physics");
+		school.addSubject("ana", "physics");
 
 		school.addPupil("ana", "cs");
 		school.addPupil("ana", "physics");
@@ -22,8 +24,14 @@ public class SchoolTst extends ConsoleProgram {
 		println("EXPECTED: salo, ana");
 		print("ACTUAL: ");
 		printIteratorElems(pup);
+		
+		Iterator<String> pup1 = school.getPupils("sandro");
+		println("\nTest 2: Pupils of: sandro");
+		println("EXPECTED: null");
+		print("ACTUAL: ");
+		printIteratorElems(pup1);
 
-		println("\nTest 2: Teachers of: ana");
+		println("\nTest 3: Teachers of: ana");
 		println("EXPECTED: mari, nino");
 		print("ACTUAL: ");
 		Iterator<String> t = school.getTeachers("ana");
@@ -32,12 +40,16 @@ public class SchoolTst extends ConsoleProgram {
 		println("removing mari");
 		school.removeTeacher("mari");
 		
-		println("\nTest 3: Teachers of: ana");
+		println("\nTest 4: Teachers of: ana");
 		println("EXPECTED: nino");
 		print("ACTUAL: ");
 		t = school.getTeachers("ana");
 		printIteratorElems(t);
 
+
+		println("removing gio");
+		school.removeTeacher("gio");
+		
 	}
 	
 	private void printIteratorElems(Iterator<String> it) {
