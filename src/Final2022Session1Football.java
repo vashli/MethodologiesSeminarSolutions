@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+
 //ამოცანა 5. (30 ქულა) ფეხბურთი
 //თქვნი მიზანია დაწეროთ Football კლასი, რომლის საშუალებითაც შევძლებთ
 //ფეხბურთელებისა და კლუბების შესახებ ინფორმაციის მართვას. კლასი უნდა
@@ -30,7 +31,7 @@ import java.util.Iterator;
 public class Final2022Session1Football implements Final2022Session1Footballer {
 	private HashMap<String, HashSet<String>> clubPlayers;
 	private HashMap<String, HashSet<String>> playerClubs;
-	
+
 	public Final2022Session1Football() {
 		clubPlayers = new HashMap<>();
 		playerClubs = new HashMap<>();
@@ -40,14 +41,14 @@ public class Final2022Session1Football implements Final2022Session1Footballer {
 	public void addFootballPlayer(String club, String player) {
 		clubPlayers.putIfAbsent(club, new HashSet<>());
 		clubPlayers.get(club).add(player);
-		
+
 		playerClubs.putIfAbsent(player, new HashSet<>());
 		playerClubs.get(player).add(club);
 	}
 
 	@Override
 	public Iterator<String> getClubs(String player) {
-		if (!playerClubs.containsKey(player) ) {
+		if (!playerClubs.containsKey(player)) {
 			return null;
 		}
 		return playerClubs.get(player).iterator();
@@ -55,16 +56,16 @@ public class Final2022Session1Football implements Final2022Session1Footballer {
 
 	@Override
 	public Iterator<String> getPlayers(String club, int n) {
+//	public Iterator<String> getPlayers(){ // ფაქტობრივად ამის კოდს ვწერთ
 		HashSet<String> badClubs = badClubs();
-		if(badClubs.size() == 0) {
+		if (badClubs.size() == 0) {
 			return null;
 		}
 		HashSet<String> players = new HashSet<>();
-//		for (String player: clubPlayers.get(club)) { // piroba cota gaugebaria
-		for (String player: playerClubs.keySet()) {
+		for (String player : playerClubs.keySet()) {
 			boolean good = true;
-			for(String cl2: playerClubs.get(player)) {
-				if(badClubs.contains(cl2)) {
+			for (String cl2 : playerClubs.get(player)) {
+				if (badClubs.contains(cl2)) {
 					good = false;
 					break;
 				}
@@ -76,12 +77,11 @@ public class Final2022Session1Football implements Final2022Session1Footballer {
 		return players.iterator();
 	}
 
-	private HashSet<String> badClubs(){
+	private HashSet<String> badClubs() {
 		HashSet<String> badClubs = new HashSet<>();
-		
 		HashSet<String> badPlayers = badPlayers();
-		for(String club: clubPlayers.keySet()) {
-			for(String player: clubPlayers.get(club)) {
+		for (String club : clubPlayers.keySet()) {
+			for (String player : clubPlayers.get(club)) {
 				if (badPlayers.contains(player)) {
 					badClubs.add(club);
 					break;
@@ -90,9 +90,10 @@ public class Final2022Session1Football implements Final2022Session1Footballer {
 		}
 		return badClubs;
 	}
-	private HashSet<String> badPlayers(){
+
+	private HashSet<String> badPlayers() {
 		HashSet<String> badPlayers = new HashSet<>();
-		for(String player: playerClubs.keySet()) {
+		for (String player : playerClubs.keySet()) {
 			if (playerClubs.get(player).size() > 3) {
 				badPlayers.add(player);
 			}

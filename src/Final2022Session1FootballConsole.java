@@ -21,11 +21,8 @@ public class Final2022Session1FootballConsole extends ConsoleProgram {
 		printIteratorElems(football.getClubs("mari"));
 		printIteratorElems(football.getClubs("nino"));
 
-		printIteratorElems(football.getPlayers("dinamo", 3));
-		printIteratorElems(football.getPlayers("real", 3));
-		printIteratorElems(football.getPlayers("olimpi", 3));
-		printIteratorElems(football.getPlayers("barcellona", 3));
-		printIteratorElems(football.getPlayers("goodClub", 3));
+		printIteratorElems(football.getPlayers("dinamo", 3)); // arguments dont matter
+		
 
 	}
 
