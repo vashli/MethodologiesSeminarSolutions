@@ -17,4 +17,7 @@ https://docs.google.com/document/d/1AVkTzyPBdkFZYUKBjRnxR0tspiycwlnID53uKB-6XKE/
 ფინალურისთვის სავარჯიშო ამოცანები:
 https://docs.google.com/document/d/1YiDOPJwCGBPvfUa0YCT2LylNN3fCRPfp7EbRi5xsa-0/edit?usp=sharing
 
+ვიდეოების ლინკი:
+https://www.youtube.com/playlist?list=PL6qg6DlVkjd51K9nhQgCxmvvhW40pCWjS
+
 
